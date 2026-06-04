@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Footer</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <footer>
+    <div class="footer-grid">
+
+      <!-- Coluna 1: About -->
+      <div class="col">
+        <h3>About us</h3>
+        <p class="about-text">CodingLab is a channel where you can learn HTML, CSS, and also JavaScript along with creative CSS Animations and Effects.</p>
+        <h3 class="contact-title">Contact us</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-phone"></i> +007 6687 9985</li>
+          <li><i class="fa-regular fa-envelope"></i> abc@gmail.com</li>
+        </ul>
+      </div>
+
+      <!-- Coluna 2: Services -->
+      <div class="col">
+        <h3>Our Services</h3>
+        <ul class="services-list">
+          <li><a href="#">Mobile Application Design</a></li>
+          <li><a href="#">Wire framing &amp; Prototyping</a></li>
+          <li><a href="#">Web Design, Development</a></li>
+          <li><a href="#">Web User Interface Design</a></li>
+          <li><a href="#">Web UX Design, Research</a></li>
+          <li><a href="#">Theme Development, Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Subscribe -->
+      <div class="col">
+        <h3>Subscribe us</h3>
+        <div class="subscribe">
+          <!-- Input nativo com required: o browser mostra a mensagem automaticamente -->
+          <input type="email" id="email-input" placeholder="Enter email address" required/>
+          <button type="button" id="send-btn" onclick="handleSend()">Send</button>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2020 <span class="brand">CodingLab</span> All rights reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    function handleSend() {
+      const input = document.getElementById('email-input');
+      const btn   = document.getElementById('send-btn');
+
+      if (!input.value.trim()) {
+        // Mostra a validação nativa do browser
+        input.reportValidity();
+        return;
+      }
+
+      // Inverte as cores
+      btn.classList.toggle('inverted');
+    }
+  </script>
+
+</body>
+</html>
